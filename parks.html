@@ -6,10 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parks</title>
     <link rel="stylesheet" href="./styles/homepage.css">
+    <script src="./scripts/base.js"></script>
+    <link rel="stylesheet" href="./styles/parks.css">
+    <script src="./scripts/locationData.js"></script>
+    <script src="./scripts/mountainData.js"></script>
+    <script src="./scripts/nationalParkData.js"></script>
+    <script src="./scripts/parkTypeData.js"></script>
 </head>
 
 <body>
-    <h1>Enjoy the Outdoors!</h1>
-    
+    <a href="homepage.html">Home</a>
+    <h1>parks</h1>
+    <h2>Search by:</h2>
+    <label>
+        <input type="radio" name="searchBy" is="locationRaido">
+        Location(state)
+    </label>
+    <label>
+        <input type="radio" name="searchBy" id="parkTypeRadio">
+        Park Type
+    </label>
+    <div class="filters">
+        <label id="locationLabel">
+            Location:
+            <select name="locations" id="locatons"></select>
+        </label>
+        <label id="parkTypeLabel" style="display;none">
+            Park Type:
+            <select name="parkTypes" id="parkTypes"></select>
+        </label>
+    </div>
+    <div id="results">?</div>
 </body>
 </html>

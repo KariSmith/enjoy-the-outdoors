@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showResults() {
         let filtered = [];
-        results.innerHTML = "Loading...";
+        results.innerHTML = "Loading..."; //CLEAR OUT THE OLD
+
         if (locationRadio.checked) {
             filtered = nationalParksArray.filter(
                 o => o.State.toUpperCase() === locations.value.toUpperCase()
@@ -65,4 +66,4 @@ document.addEventListener("DOMContentLoaded", () => {
         .forEach(pto => parkTypes.appendChild(pto));
 
 
-});
+});//end loaded 

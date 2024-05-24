@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         results.innerHTML = "";
         filtered.forEach(p => results.appendChild(getPark(p)));
         if(!filtered.length){
-            results.innerHTML = "No Adventures Loading...";
+            results.innerHTML = "No Adventures Loading..."; //if no info is found
         }
     }
     locations.addEventListener("change", showResults);
@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleSearchBy(e) {
         if (locationRadio.checked) {
             locationLabel.style.display = "block";
-            parkTypeLabel.style.display = "none";
+            parkTypeLabel.style.display = "none"; //display location option
         } else {
             locationLabel.style.display = "none";
-            parkTypeLabel.style.display = "block";
+            parkTypeLabel.style.display = "block"; //display park type option
         }
         showResults();
     }

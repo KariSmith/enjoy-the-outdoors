@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="./styles/homepage.css">
     <script src="./scripts/base.js"></script>
     <link rel="stylesheet" href="./styles/parks.css">
-    <script src="./scripts/parks.js"></script>
-    <script src="./scripts/locationData.js"></script>
-    <script src="./scripts/mountainData.js"></script>
-    <script src="./scripts/nationalParkData.js"></script>
     <script src="./scripts/parkTypeData.js"></script>
+    <script src="./scripts/nationalParkData.js"></script>
+    <script src="./scripts/locationData.js"></script>
+    <script src="./scripts/parks.js"></script>
 </head>
 
 <body>
-    <a href="homepage.html">Home</a>
+    <a href="homepage.html">HOME</a>
     <h1>Parks</h1>
-    <h2>Search by:</h2>
+    <h2>Search By:</h2>
     <label>
-        <input type="radio" name="searchBy" is="locationRaido">
-        Location(state)
+        <input type="radio" name="searchBy" id="locationRadio" checked>
+        Location (State)
     </label>
+    <br>
     <label>
         <input type="radio" name="searchBy" id="parkTypeRadio">
         Park Type
@@ -30,13 +30,14 @@
     <div class="filters">
         <label id="locationLabel">
             Location:
-            <select name="locations" id="locatons"></select>
+            <select name="locations" id="locations"></select>
         </label>
-        <label id="parkTypeLabel" style="display;none">
+        <label id="parkTypeLabel" style="display:none">
             Park Type:
             <select name="parkTypes" id="parkTypes"></select>
         </label>
     </div>
-    <div id="results">?</div>
+    <div id="results">What would you like to know?</div>
 </body>
+
 </html>

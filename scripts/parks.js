@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showResults() {
         let filtered = [];
-        results.innerHTML = "Loading..."; //CLEAR OUT THE OLD
-
+        results.innerHTML = "Loading...";
         if (locationRadio.checked) {
             filtered = nationalParksArray.filter(
                 o => o.State.toUpperCase() === locations.value.toUpperCase()
@@ -35,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 )
             )
         }
-        results.innerHTML = ""; //CLEAR OUT THE OLD
+        results.innerHTML = "";
         filtered.forEach(p => results.appendChild(getPark(p)));
         if(!filtered.length){
-            results.innerHTML = "No Matching Parks";
+            results.innerHTML = "No Adventures Loading...";
         }
     }
     locations.addEventListener("change", showResults);
@@ -66,4 +65,4 @@ document.addEventListener("DOMContentLoaded", () => {
         .forEach(pto => parkTypes.appendChild(pto));
 
 
-});//end loaded 
+}); 

@@ -6,12 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <br>
             <img src="./images/${mountain.img}">
             <h3>${mountain.name}</h3>
-            <table>
-                <tr><th> Elevation:</th><td> ${mountain.elevation} feet                    </td></tr>
-                <tr><th> Effort:   </th><td> ${mountain.effort}                            </td></tr>
-                <tr><th> Lattitude:</th><td> ${mountain.coords.lng}                        </td></tr>
-                <tr><th> Longitude:</th><td> ${mountain.coords.lat}, ${mountain.coords.lng}</td></tr>
-            </table>
+            <p><b>Elevation:</b> ${mountain.elevation} feet<p>
+            <p><b>Effort:</b> ${mountain.effort}</p>
+            <p><b>Lattitude:</b> ${mountain.coords.lat}</p>
+            <p><b>Longitude:</b> ${mountain.coords.lng}</p>
             <p> ${mountain.desc} </p>
         `;
         // function that can "fetch" the sunrise/sunset times
